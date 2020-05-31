@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">電卓アプリ</string>
+    <string name="calc_number1">1</string>
+    <string name="calc_number2">2</string>
+    <string name="calc_number3">3</string>
+    <string name="calc_number4">4</string>
+    <string name="calc_number5">5</string>
+    <string name="calc_number6">6</string>
+    <string name="calc_number7">7</string>
+    <string name="calc_number8">8</string>
+    <string name="calc_number9">9</string>
+    <string name="calc_number0">0</string>
+    <string name="calc_clear">C</string>
+    <string name="calc_result">=</string>
+    <string name="calc_tasu">+</string>
+    <string name="calc_hiku">-</string>
+    <string name="calc_kakeru">×</string>
+    <string name="calc_waru">÷</string>
+    <string name="calc_minus">-</string>
+</resources>

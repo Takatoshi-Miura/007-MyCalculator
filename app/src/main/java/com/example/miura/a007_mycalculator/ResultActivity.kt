@@ -1,0 +1,36 @@
+package com.example.miura.a007_mycalculator
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_result.*
+
+class ResultActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_result)
+
+        //MainActivityからの値の受け取り
+        val bundle: Bundle = intent.extras!!
+        val numberOfLeft: Int = bundle.getInt("numberOfLeft")
+        val numberOfRight: Int = bundle.getInt("numberOfRight")
+        val markOfCalc: String? = bundle.getString("markOfCenter")
+
+        //受け取った値を使用して計算
+        val result : Int = when(markOfCalc){
+            "+" -> numberOfLeft + numberOfRight
+            "-" -> numberOfLeft - numberOfRight
+            "×" -> numberOfLeft * numberOfRight
+            "÷" -> numberOfLeft / numberOfRight
+            else -> 0
+        }
+
+        //計算結果をテキストビューに表示
+        textViewResult.text = result.toString()
+
+        //「戻る」ボタンをタップで前画面に戻る
+        buttonBack.setOnClickListener{
+            finish()
+        }
+    }
+}
