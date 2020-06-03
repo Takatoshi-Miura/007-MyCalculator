@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         button7.setOnClickListener(this)
         button8.setOnClickListener(this)
         button9.setOnClickListener(this)
+        buttonMinus.setOnClickListener(this)
         buttonClear.setOnClickListener(this)
         buttonTasu.setOnClickListener(this)
         buttonHiku.setOnClickListener(this)
