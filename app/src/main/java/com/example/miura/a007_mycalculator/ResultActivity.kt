@@ -21,13 +21,24 @@ class ResultActivity : AppCompatActivity() {
             "+" -> numberOfLeft + numberOfRight
             "-" -> numberOfLeft - numberOfRight
             "×" -> numberOfLeft * numberOfRight
-            "÷" -> numberOfLeft / numberOfRight
+            "÷" ->  //0での除算はできないため、臨時で0を返す
+                    if (numberOfRight == 0) {
+                        0
+                    } else {
+                        numberOfLeft / numberOfRight
+                    }
             else -> 0
         }
 
         //計算結果をテキストビューに表示
-        textViewResult.text = result.toString()
+        //0での除算はできない旨を表示
+        if (markOfCalc == "÷" && numberOfRight == 0) {
+            textViewResult.text = "計算できません"
+        } else {
+            textViewResult.text = result.toString()
+        }
 
+        
         //「戻る」ボタンをタップで前画面に戻る
         buttonBack.setOnClickListener{
             finish()
